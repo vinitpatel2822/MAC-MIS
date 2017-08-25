@@ -1,12 +1,5 @@
 <?php session_start(); ?>
 
-<?php
-											$con=mysqli_connect("localhost","root","");
-											mysqli_select_db($con,"MACMIS");
-
-											$result=mysqli_query($con,"select * from tblRegisterUser") or die("Failed to Query Database".mysqli_error());
-											//$row=mysql_fetch_array($result);
-										?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,264 +70,11 @@
 
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-					<!--	<li class="grey dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-tasks"></i>
-								<span class="badge badge-grey">4</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-check"></i>
-									4 Tasks to complete
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Software Update</span>
-													<span class="pull-right">65%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:65%" class="progress-bar"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Hardware Upgrade</span>
-													<span class="pull-right">35%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Unit Testing</span>
-													<span class="pull-right">15%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Bug Fixes</span>
-													<span class="pull-right">90%</span>
-												</div>
-
-												<div class="progress progress-mini progress-striped active">
-													<div style="width:90%" class="progress-bar progress-bar-success"></div>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See tasks with details
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="purple dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
-								<span class="badge badge-important">8</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-exclamation-triangle"></i>
-									8 Notifications
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar navbar-pink">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-														New Comments
-													</span>
-													<span class="pull-right badge badge-info">+12</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="btn btn-xs btn-primary fa fa-user"></i>
-												Bob just signed up as an editor ...
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-														New Orders
-													</span>
-													<span class="pull-right badge badge-success">+8</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-														Followers
-													</span>
-													<span class="pull-right badge badge-info">+11</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See all notifications
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="green dropdown-modal"> 
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-								<span class="badge badge-success">5</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-envelope-o"></i>
-									5 Messages
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Alex:</span>
-														Ciao sociis natoque penatibus et auctor ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>a moment ago</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Susan:</span>
-														Vestibulum id ligula porta felis euismod ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>20 minutes ago</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Bob:</span>
-														Nullam quis risus eget urna mollis ornare ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>3:15 pm</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Kate:</span>
-														Ciao sociis natoque eget urna mollis ornare ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>1:33 pm</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Fred:</span>
-														Vestibulum id penatibus et auctor  ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>10:09 am</span>
-													</span>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</li>	
-
-								<li class="dropdown-footer">
-									<a href="inbox.html">
-										See all messages
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li> -->
+	
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/images/avatars/avatar2.png" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									<!--Vinit Patel -->
@@ -345,21 +85,8 @@
 							</a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Settings
-									</a>
-								</li>
-
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i>
-										Profile
-									</a>
-								</li>
-
-								<li class="divider"></li>
+								
+								
 
 								<li>
 									<a href="login.php">
@@ -385,23 +112,7 @@
 				</script>
 
 				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-				<!--	<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large"> 
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-					</div>	-->
+			
 
 					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
 						<span class="btn btn-success"></span>
@@ -426,25 +137,20 @@
 					
 					<li class="">
 						<a href="AddUser.php">
-							<i class="menu-icon fa fa-list-alt"></i>
+						 
+
+							<i class="menu-icon fa fa-users"></i>
 							<span class="menu-text"> Add User </span>
 						</a>
 
 						<b class="arrow"></b>
 					</li>
 					
-					<li class="">
-						<a href="viewUser.php">
-							<i class="menu-icon fa fa-list-alt"></i>
-							<span class="menu-text"> View / Manage User </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
+					
 					
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<i class="menu-icon fa fa-leaf"></i>
 							<span class="menu-text"> Students </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -534,7 +240,7 @@
 					
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>
+							<i class="menu-icon fa fa-folder-open"></i>
 							<span class="menu-text"> Assets </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -571,6 +277,113 @@
 							</li>
 						</ul>
 					</li>
+					
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-cog"></i>
+							<span class="menu-text"> Manage Data </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="viewUser.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Users
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="viewStudent.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Students
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="viewStudentEducation.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student Education
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewSemester.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Semesters
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewInternship.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Internship
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewJobGroup.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Job Group
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewJob.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Jobs
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCompany.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Company
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCountry.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Country
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewState.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									State
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCity.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									City
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>					
+					
+					
+					
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
@@ -584,7 +397,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="viewStudent.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Students
 								</a>
@@ -593,7 +406,7 @@
 							</li>
 							
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentGPA.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student Average GPA
 								</a>
@@ -602,7 +415,7 @@
 							</li>
 							
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentCountry.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student from Specific Country
 								</a>
@@ -610,23 +423,16 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentJob.php">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Student with Job
+									Student With / Without Job
 								</a>
 
 								<b class="arrow"></b>
 							</li>
+							
 							<li class="">
-								<a href="inbox.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student without Job
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentYear.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student from Specific Year
 								</a>
@@ -634,7 +440,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptAllEmployer.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Employers
 								</a>
@@ -642,7 +448,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptEmployerCity.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Employer from Specific City
 								</a>
@@ -650,7 +456,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptOpenJob.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Open Positions
 								</a>
@@ -675,7 +481,8 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Home</a>
 							</li>
-							<li class="active">Dashboard</li>
+							<li class="active">Manage Data</li>
+							<li class="active">View User</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -758,10 +565,10 @@
 
 						<div class="page-header">
 							<h1>
-								Dashboard
+								View User
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									overview &amp; stats
+								
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -790,14 +597,14 @@
 														
 														<th>User Id</th>
 														<th>First Name</th>
-														<th class="hidden-480">Last Name</th>
+														<th>Last Name</th>
 
 														<th>
 															
 															Email ID
 														</th>
-														<th class="hidden-480">Password</th>
-														<th class="hidden-480">User Type</th>
+														<th>Password</th>
+														<th>User Type</th>
 
 														<th></th>
 													</tr>
@@ -806,7 +613,14 @@
 												<tbody>
 												
 													<?php
-															  if( mysqli_num_rows( $result )==0 ){
+												
+														$con=mysqli_connect("localhost","root","");
+														mysqli_select_db($con,"MACMIS");
+
+														$result=mysqli_query($con,"select * from tblRegisterUser") or die("Failed to Query Database".mysqli_error());
+														//$row=mysql_fetch_array($result);
+									
+																if( mysqli_num_rows( $result )==0 ){
 																echo '<tr><td colspan="4">No Rows Returned</td></tr>';
 															  }else{
 																while( $row = mysqli_fetch_assoc( $result ) ){

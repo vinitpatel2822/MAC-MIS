@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -67,267 +68,15 @@
 
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-					<!--	<li class="grey dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-tasks"></i>
-								<span class="badge badge-grey">4</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-check"></i>
-									4 Tasks to complete
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Software Update</span>
-													<span class="pull-right">65%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:65%" class="progress-bar"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Hardware Upgrade</span>
-													<span class="pull-right">35%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Unit Testing</span>
-													<span class="pull-right">15%</span>
-												</div>
-
-												<div class="progress progress-mini">
-													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Bug Fixes</span>
-													<span class="pull-right">90%</span>
-												</div>
-
-												<div class="progress progress-mini progress-striped active">
-													<div style="width:90%" class="progress-bar progress-bar-success"></div>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See tasks with details
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="purple dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
-								<span class="badge badge-important">8</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-exclamation-triangle"></i>
-									8 Notifications
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar navbar-pink">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-														New Comments
-													</span>
-													<span class="pull-right badge badge-info">+12</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="btn btn-xs btn-primary fa fa-user"></i>
-												Bob just signed up as an editor ...
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-														New Orders
-													</span>
-													<span class="pull-right badge badge-success">+8</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-														Followers
-													</span>
-													<span class="pull-right badge badge-info">+11</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See all notifications
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="green dropdown-modal"> 
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-								<span class="badge badge-success">5</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-envelope-o"></i>
-									5 Messages
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Alex:</span>
-														Ciao sociis natoque penatibus et auctor ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>a moment ago</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Susan:</span>
-														Vestibulum id ligula porta felis euismod ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>20 minutes ago</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Bob:</span>
-														Nullam quis risus eget urna mollis ornare ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>3:15 pm</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Kate:</span>
-														Ciao sociis natoque eget urna mollis ornare ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>1:33 pm</span>
-													</span>
-												</span>
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Fred:</span>
-														Vestibulum id penatibus et auctor  ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>10:09 am</span>
-													</span>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</li>	
-
-								<li class="dropdown-footer">
-									<a href="inbox.html">
-										See all messages
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li> -->
+	
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Vinit Patel
+									<!--Vinit Patel -->
+									<?php echo $_SESSION['username']; ?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -351,7 +100,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="login.php">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
@@ -374,23 +123,7 @@
 				</script>
 
 				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-				<!--	<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large"> 
-						<button class="btn btn-success">
-							<i class="ace-icon fa fa-signal"></i>
-						</button>
-
-						<button class="btn btn-info">
-							<i class="ace-icon fa fa-pencil"></i>
-						</button>
-
-						<button class="btn btn-warning">
-							<i class="ace-icon fa fa-users"></i>
-						</button>
-
-						<button class="btn btn-danger">
-							<i class="ace-icon fa fa-cogs"></i>
-						</button>
-					</div>	-->
+			
 
 					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
 						<span class="btn btn-success"></span>
@@ -405,7 +138,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="Dashboard.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
 						</a>
@@ -414,17 +147,21 @@
 					</li>
 					
 					<li class="">
-						<a href="widgets.html">
-							<i class="menu-icon fa fa-list-alt"></i>
+						<a href="AddUser.php">
+						 
+
+							<i class="menu-icon fa fa-users"></i>
 							<span class="menu-text"> Add User </span>
 						</a>
 
 						<b class="arrow"></b>
 					</li>
 					
+					
+					
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<i class="menu-icon fa fa-leaf"></i>
 							<span class="menu-text"> Students </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -434,7 +171,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="AddStudentInfo.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add Student Info
 								</a>
@@ -443,7 +180,7 @@
 							</li>
 
 							<li class="">
-								<a href="inbox.html">
+								<a href="AddStudentEducation.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add Student Education
 								</a>
@@ -452,7 +189,7 @@
 							</li>
 							
 							<li class="">
-								<a href="inbox.html">
+								<a href="AddSemester.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add Semester
 								</a>
@@ -464,34 +201,12 @@
 					
 					
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="Internship.php">
 							<i class="menu-icon fa fa-list"></i>
 							<span class="menu-text"> Internship </span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
 
 						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="tables.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Simple &amp; Dynamic
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="jqgrid.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									jqGrid plugin
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
 					</li>
 					
 					<li class="">
@@ -506,7 +221,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="AddJobGroup.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add Job Group
 								</a>
@@ -515,7 +230,7 @@
 							</li>
 
 							<li class="">
-								<a href="inbox.html">
+								<a href="AddNewJob.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add New Job
 								</a>
@@ -524,7 +239,7 @@
 							</li>
 							
 							<li class="">
-								<a href="inbox.html">
+								<a href="AddNewCompany.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add New Company
 								</a>
@@ -533,6 +248,153 @@
 							</li>
 						</ul>
 					</li>
+					
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-folder-open"></i>
+							<span class="menu-text"> Assets </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="AddNewCountry.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add New Country
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="AddNewState.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add New State
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="AddNewCity.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add New City
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+					
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-cog"></i>
+							<span class="menu-text"> Manage Data </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="viewUser.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Users
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="viewStudent.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Students
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="viewStudentEducation.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student Education
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewSemester.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Semesters
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewInternship.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Internship
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewJobGroup.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Job Group
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewJob.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Jobs
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCompany.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Company
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCountry.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Country
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewState.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									State
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="viewCity.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									City
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>					
+					
+					
+					
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
@@ -546,7 +408,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="profile.html">
+								<a href="viewStudent.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Students
 								</a>
@@ -564,7 +426,7 @@
 							</li>
 							
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentCountry.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student from Specific Country
 								</a>
@@ -588,7 +450,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptStudentYear.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student from Specific Year
 								</a>
@@ -596,7 +458,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptAllEmployer.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Employers
 								</a>
@@ -604,7 +466,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptEmployerCity.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Employer from Specific City
 								</a>
@@ -612,7 +474,7 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="inbox.html">
+								<a href="rptOpenJob.php">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Open Positions
 								</a>
@@ -729,1125 +591,11 @@
 						</div><!-- /.page-header -->
 
 						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="alert alert-block alert-success">
-									<button type="button" class="close" data-dismiss="alert">
-										<i class="ace-icon fa fa-times"></i>
-									</button>
-
-									<i class="ace-icon fa fa-check green"></i>
-
-									Welcome to
-									<strong class="green">
-										Ace
-										<small>(v1.4)</small>
-									</strong>,
-	лёгкий, многофункциональный и простой в использовании шаблон для админки на bootstrap 3.3.6. Загрузить исходники с <a href="https://github.com/bopoda/ace">github</a> (with minified ace js/css files).
-								</div>
-
-								<div class="row">
-									<div class="space-6"></div>
-
-									<div class="col-sm-7 infobox-container">
-										<div class="infobox infobox-green">
-											<div class="infobox-icon">
-												<i class="ace-icon fa fa-comments"></i>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-data-number">32</span>
-												<div class="infobox-content">comments + 2 reviews</div>
-											</div>
-
-											<div class="stat stat-success">8%</div>
-										</div>
-
-										<div class="infobox infobox-blue">
-											<div class="infobox-icon">
-												<i class="ace-icon fa fa-twitter"></i>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-data-number">11</span>
-												<div class="infobox-content">new followers</div>
-											</div>
-
-											<div class="badge badge-success">
-												+32%
-												<i class="ace-icon fa fa-arrow-up"></i>
-											</div>
-										</div>
-
-										<div class="infobox infobox-pink">
-											<div class="infobox-icon">
-												<i class="ace-icon fa fa-shopping-cart"></i>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-data-number">8</span>
-												<div class="infobox-content">new orders</div>
-											</div>
-											<div class="stat stat-important">4%</div>
-										</div>
-
-										<div class="infobox infobox-red">
-											<div class="infobox-icon">
-												<i class="ace-icon fa fa-flask"></i>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-data-number">7</span>
-												<div class="infobox-content">experiments</div>
-											</div>
-										</div>
-
-										<div class="infobox infobox-orange2">
-											<div class="infobox-chart">
-												<span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-data-number">6,251</span>
-												<div class="infobox-content">pageviews</div>
-											</div>
-
-											<div class="badge badge-success">
-												7.2%
-												<i class="ace-icon fa fa-arrow-up"></i>
-											</div>
-										</div>
-
-										<div class="infobox infobox-blue2">
-											<div class="infobox-progress">
-												<div class="easy-pie-chart percentage" data-percent="42" data-size="46">
-													<span class="percent">42</span>%
-												</div>
-											</div>
-
-											<div class="infobox-data">
-												<span class="infobox-text">traffic used</span>
-
-												<div class="infobox-content">
-													<span class="bigger-110">~</span>
-													58GB remaining
-												</div>
-											</div>
-										</div>
-
-										<div class="space-6"></div>
-
-										<div class="infobox infobox-green infobox-small infobox-dark">
-											<div class="infobox-progress">
-												<div class="easy-pie-chart percentage" data-percent="61" data-size="39">
-													<span class="percent">61</span>%
-												</div>
-											</div>
-
-											<div class="infobox-data">
-												<div class="infobox-content">Task</div>
-												<div class="infobox-content">Completion</div>
-											</div>
-										</div>
-
-										<div class="infobox infobox-blue infobox-small infobox-dark">
-											<div class="infobox-chart">
-												<span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
-											</div>
-
-											<div class="infobox-data">
-												<div class="infobox-content">Earnings</div>
-												<div class="infobox-content">$32,000</div>
-											</div>
-										</div>
-
-										<div class="infobox infobox-grey infobox-small infobox-dark">
-											<div class="infobox-icon">
-												<i class="ace-icon fa fa-download"></i>
-											</div>
-
-											<div class="infobox-data">
-												<div class="infobox-content">Downloads</div>
-												<div class="infobox-content">1,205</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="vspace-12-sm"></div>
-
-									<div class="col-sm-5">
-										<div class="widget-box">
-											<div class="widget-header widget-header-flat widget-header-small">
-												<h5 class="widget-title">
-													<i class="ace-icon fa fa-signal"></i>
-													Traffic Sources
-												</h5>
-
-												<div class="widget-toolbar no-border">
-													<div class="inline dropdown-hover">
-														<button class="btn btn-minier btn-primary">
-															This Week
-															<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-															<li class="active">
-																<a href="#" class="blue">
-																	<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
-																	This Week
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	Last Week
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	This Month
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	Last Month
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main">
-													<div id="piechart-placeholder"></div>
-
-													<div class="hr hr8 hr-double"></div>
-
-													<div class="clearfix">
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-facebook-square fa-2x blue"></i>
-																&nbsp; likes
-															</span>
-															<h4 class="bigger pull-right">1,255</h4>
-														</div>
-
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-twitter-square fa-2x purple"></i>
-																&nbsp; tweets
-															</span>
-															<h4 class="bigger pull-right">941</h4>
-														</div>
-
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-pinterest-square fa-2x red"></i>
-																&nbsp; pins
-															</span>
-															<h4 class="bigger pull-right">1,050</h4>
-														</div>
-													</div>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-
-								<div class="hr hr32 hr-dotted"></div>
-
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="widget-box transparent">
-											<div class="widget-header widget-header-flat">
-												<h4 class="widget-title lighter">
-													<i class="ace-icon fa fa-star orange"></i>
-													Popular Domains
-												</h4>
-
-												<div class="widget-toolbar">
-													<a href="#" data-action="collapse">
-														<i class="ace-icon fa fa-chevron-up"></i>
-													</a>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main no-padding">
-													<table class="table table-bordered table-striped">
-														<thead class="thin-border-bottom">
-															<tr>
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>name
-																</th>
-
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>price
-																</th>
-
-																<th class="hidden-480">
-																	<i class="ace-icon fa fa-caret-right blue"></i>status
-																</th>
-															</tr>
-														</thead>
-
-														<tbody>
-															<tr>
-																<td>internet.com</td>
-
-																<td>
-																	<small>
-																		<s class="red">$29.99</s>
-																	</small>
-																	<b class="green">$19.99</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-info arrowed-right arrowed-in">on sale</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>online.com</td>
-
-																<td>
-																	<b class="blue">$16.45</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-success arrowed-in arrowed-in-right">approved</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>newnet.com</td>
-
-																<td>
-																	<b class="blue">$15.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-danger arrowed">pending</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>web.com</td>
-
-																<td>
-																	<small>
-																		<s class="red">$24.99</s>
-																	</small>
-																	<b class="green">$19.95</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label arrowed">
-																		<s>out of stock</s>
-																	</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>domain.com</td>
-
-																<td>
-																	<b class="blue">$12.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-warning arrowed arrowed-right">SOLD</span>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-
-									<div class="col-sm-7">
-										<div class="widget-box transparent">
-											<div class="widget-header widget-header-flat">
-												<h4 class="widget-title lighter">
-													<i class="ace-icon fa fa-signal"></i>
-													Sale Stats
-												</h4>
-
-												<div class="widget-toolbar">
-													<a href="#" data-action="collapse">
-														<i class="ace-icon fa fa-chevron-up"></i>
-													</a>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main padding-4">
-													<div id="sales-charts"></div>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-
-								<div class="hr hr32 hr-dotted"></div>
-
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="widget-box transparent" id="recent-box">
-											<div class="widget-header">
-												<h4 class="widget-title lighter smaller">
-													<i class="ace-icon fa fa-rss orange"></i>RECENT
-												</h4>
-
-												<div class="widget-toolbar no-border">
-													<ul class="nav nav-tabs" id="recent-tab">
-														<li class="active">
-															<a data-toggle="tab" href="#task-tab">Tasks</a>
-														</li>
-
-														<li>
-															<a data-toggle="tab" href="#member-tab">Members</a>
-														</li>
-
-														<li>
-															<a data-toggle="tab" href="#comment-tab">Comments</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main padding-4">
-													<div class="tab-content padding-8">
-														<div id="task-tab" class="tab-pane active">
-															<h4 class="smaller lighter green">
-																<i class="ace-icon fa fa-list"></i>
-																Sortable Lists
-															</h4>
-
-															<ul id="tasks" class="item-list">
-																<li class="item-orange clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Answering customer questions</span>
-																	</label>
-
-																	<div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
-																		<span class="percent">42</span>%
-																	</div>
-																</li>
-
-																<li class="item-red clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Fixing bugs</span>
-																	</label>
-
-																	<div class="pull-right action-buttons">
-																		<a href="#" class="blue">
-																			<i class="ace-icon fa fa-pencil bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="red">
-																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																		</a>
-
-																		<span class="vbar"></span>
-
-																		<a href="#" class="green">
-																			<i class="ace-icon fa fa-flag bigger-130"></i>
-																		</a>
-																	</div>
-																</li>
-
-																<li class="item-default clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Adding new features</span>
-																	</label>
-
-																	<div class="pull-right pos-rel dropdown-hover">
-																		<button class="btn btn-minier bigger btn-primary">
-																			<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
-																		</button>
-
-																		<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
-																			<li>
-																				<a href="#" class="tooltip-success" data-rel="tooltip" title="Mark&nbsp;as&nbsp;done">
-																					<span class="green">
-																						<i class="ace-icon fa fa-check bigger-110"></i>
-																					</span>
-																				</a>
-																			</li>
-
-																			<li>
-																				<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																					<span class="red">
-																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
-																					</span>
-																				</a>
-																			</li>
-																		</ul>
-																	</div>
-																</li>
-
-																<li class="item-blue clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Upgrading scripts used in template</span>
-																	</label>
-																</li>
-
-																<li class="item-grey clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Adding new skins</span>
-																	</label>
-																</li>
-
-																<li class="item-green clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Updating server software up</span>
-																	</label>
-																</li>
-
-																<li class="item-pink clearfix">
-																	<label class="inline">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"> Cleaning up</span>
-																	</label>
-																</li>
-															</ul>
-														</div>
-
-														<div id="member-tab" class="tab-pane">
-															<div class="clearfix">
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Bob Doe's avatar" src="assets/images/avatars/user.jpg" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Bob Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">20 min</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-warning label-sm">pending</span>
-
-																			<div class="inline position-relative">
-																				<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
-																					<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
-																				</button>
-
-																				<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																					<li>
-																						<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
-																							<span class="green">
-																								<i class="ace-icon fa fa-check bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
-																							<span class="orange">
-																								<i class="ace-icon fa fa-times bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																							<span class="red">
-																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Joe Doe's avatar" src="assets/images/avatars/avatar2.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Joe Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">1 hour</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-warning label-sm">pending</span>
-
-																			<div class="inline position-relative">
-																				<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
-																					<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
-																				</button>
-
-																				<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																					<li>
-																						<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
-																							<span class="green">
-																								<i class="ace-icon fa fa-check bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
-																							<span class="orange">
-																								<i class="ace-icon fa fa-times bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																							<span class="red">
-																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Jim Doe's avatar" src="assets/images/avatars/avatar.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Jim Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">2 hour</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-warning label-sm">pending</span>
-
-																			<div class="inline position-relative">
-																				<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
-																					<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
-																				</button>
-
-																				<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																					<li>
-																						<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
-																							<span class="green">
-																								<i class="ace-icon fa fa-check bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
-																							<span class="orange">
-																								<i class="ace-icon fa fa-times bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-
-																					<li>
-																						<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																							<span class="red">
-																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
-																							</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Alex Doe's avatar" src="assets/images/avatars/avatar5.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Alex Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">3 hour</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-danger label-sm">blocked</span>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Bob Doe's avatar" src="assets/images/avatars/avatar2.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Bob Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">6 hour</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-success label-sm arrowed-in">approved</span>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Susan's avatar" src="assets/images/avatars/avatar3.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Susan</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">yesterday</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-success label-sm arrowed-in">approved</span>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Phil Doe's avatar" src="assets/images/avatars/avatar4.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Phil Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">2 days ago</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-info label-sm arrowed-in arrowed-in-right">online</span>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv memberdiv">
-																	<div class="user">
-																		<img alt="Alexa Doe's avatar" src="assets/images/avatars/avatar1.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Alexa Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">3 days ago</span>
-																		</div>
-
-																		<div>
-																			<span class="label label-success label-sm arrowed-in">approved</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-															<div class="space-4"></div>
-
-															<div class="center">
-																<i class="ace-icon fa fa-users fa-2x green middle"></i>
-
-																&nbsp;
-																<a href="#" class="btn btn-sm btn-white btn-info">
-																	See all members &nbsp;
-																	<i class="ace-icon fa fa-arrow-right"></i>
-																</a>
-															</div>
-
-															<div class="hr hr-double hr8"></div>
-														</div><!-- /.#member-tab -->
-
-														<div id="comment-tab" class="tab-pane">
-															<div class="comments">
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Bob Doe's Avatar" src="assets/images/avatars/avatar.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Bob Doe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">6 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="inline position-relative">
-																			<button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
-																				<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
-																			</button>
-
-																			<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																				<li>
-																					<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
-																						<span class="green">
-																							<i class="ace-icon fa fa-check bigger-110"></i>
-																						</span>
-																					</a>
-																				</li>
-
-																				<li>
-																					<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
-																						<span class="orange">
-																							<i class="ace-icon fa fa-times bigger-110"></i>
-																						</span>
-																					</a>
-																				</li>
-
-																				<li>
-																					<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																						<span class="red">
-																							<i class="ace-icon fa fa-trash-o bigger-110"></i>
-																						</span>
-																					</a>
-																				</li>
-																			</ul>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Jennifer's Avatar" src="assets/images/avatars/avatar1.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Jennifer</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="blue">15 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Joe's Avatar" src="assets/images/avatars/avatar2.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Joe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="orange">22 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Rita's Avatar" src="assets/images/avatars/avatar3.png" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Rita</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="red">50 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-															<div class="hr hr8"></div>
-
-															<div class="center">
-																<i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
-
-																&nbsp;
-																<a href="#" class="btn btn-sm btn-white btn-info">
-																	See all comments &nbsp;
-																	<i class="ace-icon fa fa-arrow-right"></i>
-																</a>
-															</div>
-
-															<div class="hr hr-double hr8"></div>
-														</div>
-													</div>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-
-									<div class="col-sm-6">
-										<div class="widget-box">
-											<div class="widget-header">
-												<h4 class="widget-title lighter smaller">
-													<i class="ace-icon fa fa-comment blue"></i>
-													Conversation
-												</h4>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main no-padding">
-													<div class="dialogs">
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Alexa's Avatar" src="assets/images/avatars/avatar1.png" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 sec</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Alexa</a>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="John's Avatar" src="assets/images/avatars/avatar.png" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="blue">38 sec</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">John</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Bob's Avatar" src="assets/images/avatars/user.jpg" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="orange">2 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Bob</a>
-																	<span class="label label-info arrowed arrowed-in-right">admin</span>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Jim's Avatar" src="assets/images/avatars/avatar4.png" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="grey">3 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Jim</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Alexa's Avatar" src="assets/images/avatars/avatar1.png" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Alexa</a>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<form>
-														<div class="form-actions">
-															<div class="input-group">
-																<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
-																<span class="input-group-btn">
-																	<button class="btn btn-sm btn-info no-radius" type="button">
-																		<i class="ace-icon fa fa-share"></i>
-																		Send
-																	</button>
-																</span>
-															</div>
-														</div>
-													</form>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
+							
+							<?php echo $title?> <br/><br/>
+							<?php echo $content?>
+							
+							
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div>
@@ -1857,8 +605,8 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
+							<span class="blue bolder">MAC-MIS</span>
+							System &copy; 2013-2014
 						</span>
 
 						&nbsp; &nbsp;

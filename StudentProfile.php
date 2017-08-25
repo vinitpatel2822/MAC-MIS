@@ -124,7 +124,7 @@
 				</div><!-- /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
-					<li class="active">
+				<li class="active">
 						<a href="Dashboard.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
@@ -133,338 +133,15 @@
 						<b class="arrow"></b>
 					</li>
 					
-					<li class="">
-						<a href="AddUser.php">
-						 
-
+					<li>
+						<a href="StudentProfile.php">
 							<i class="menu-icon fa fa-users"></i>
-							<span class="menu-text"> Add User </span>
+							<span class="menu-text"> Studnet Profile </span>
 						</a>
 
 						<b class="arrow"></b>
 					</li>
-					
-					
-					
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-leaf"></i>
-							<span class="menu-text"> Students </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="AddStudentInfo.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add Student Info
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="AddStudentEducation.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add Student Education
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="AddSemester.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add Semester
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-					
-					
-					<li class="">
-						<a href="Internship.php">
-							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Internship </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-					
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
-							<span class="menu-text"> Jobs </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="AddJobGroup.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add Job Group
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="AddNewJob.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add New Job
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="AddNewCompany.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add New Company
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-					
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-folder-open"></i>
-							<span class="menu-text"> Assets </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="AddNewCountry.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add New Country
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="AddNewState.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add New State
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="AddNewCity.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add New City
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-					
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-cog"></i>
-							<span class="menu-text"> Manage Data </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="viewUser.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Users
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="viewStudent.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Students
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="viewStudentEducation.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student Education
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewSemester.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Semesters
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewInternship.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Internship
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewJobGroup.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Job Group
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewJob.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Jobs
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewCompany.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Company
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewCountry.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Country
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewState.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									State
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="viewCity.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									City
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>					
-					
-					
-					
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text"> Reports </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="viewStudent.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Students
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="rptStudentGPA.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student Average GPA
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="rptStudentCountry.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student from Specific Country
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="rptStudentJob.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student With / Without Job
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							
-							<li class="">
-								<a href="rptStudentYear.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Student from Specific Year
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="rptAllEmployer.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Employers
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="rptEmployerCity.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Employer from Specific City
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="rptOpenJob.php">
-									<i class="menu-icon fa fa-caret-right"></i>
-									All Open Positions
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>					
-					
-				</ul><!-- /.nav-list -->
+			</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -479,129 +156,152 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Home</a>
 							</li>
-							<li class="active">Add User</li>
+							<li class="active">Student Profile</li>
 						</ul><!-- /.breadcrumb -->
 
 						
 					</div>
+					
+					<?php 
+						
+						$con=mysqli_connect("localhost","root","");
+						
+						mysqli_select_db($con,"MACMIS");
+						
+						$S_email=$_SESSION['username'];
+						
+						$result=mysqli_query($con,"SELECT * FROM tblStudent INNER JOIN tblCountry ON tblStudent.CountryId = tblCountry.CountryId INNER JOIN tblSemester ON tblStudent.SemesterId = tblSemester.SemesterId INNER JOIN tblEducation ON tblStudent.StudentId = tblEducation.StudentId WHERE StudentEmail = '$S_email'") or die("Failed to Query Database".mysql_error());
+						
+						$count=mysqli_num_rows($result);
+						
+						
+						$row=mysqli_fetch_array($result); 
+						
+						$abc=$row['StudentFirstName'];
+						
+						
+						?>
 
 					<div class="page-content">
 					
 						<div class="page-header">
 							<h1>
-								Add User
+								Student Profile
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									
 								</small>
+								Welcome, <?php echo $row['StudentFirstName']; ?>
 							</h1>
 						</div><!-- /.page-header -->
 
 						<div class="row">
 						
 						
-						<form action="AddUser.php" class="form-horizontal" role="form" method="POST">
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Role </label>
-
-										<div class="col-sm-3 widget-body">
-											
-															<select class="form-control" name="userType" id="form-field-select-1">
-																<option value="">--Select User Role--</option>
-																<option value="Staff">Staff</option>
-																<option value="Faculty">Faculty</option>
-																<option value="Student">Student</option>
-															</select>
-										</div>
-
-									</div>
-
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="fname" name="fname" placeholder="First Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="lname" name="lname" placeholder="Last Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="uname" name="uname" placeholder="Username" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password </label>
-
-										<div class="col-sm-9">
-											<input type="password" id="pwd" name="pwd" placeholder="Password" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4">
 						
-									</div>
-									
-										<?php
-										if(isset($_POST['sub']))
-										{
-									?>
-											<div class="form-group">								
-											<div class="col-sm-9">
-												<center><h4>Inserted Successfully...!!!</h4></center>
-											</div>
-											</div>
-									<?php	
-										}
-									?>
-									
-									
-									<div class="clearfix form-actions">
-										<div class="col-md-offset-3 col-md-9">
-											<input type="submit" value="submit" name="sub" class="btn btn-info">
-
-
-											&nbsp; &nbsp; &nbsp;
-											<button class="btn" type="reset">
-												<i class="ace-icon fa fa-undo bigger-110"></i>
-												Reset
-											</button>
-										</div>
-									</div>
-				</form>
-						
-						
-						
-						
+						<div class="col-xs-6">
+										<table id="simple-table" class="table  table-bordered table-hover">
+											<thead>
+												<tr>
+													<th class="center">Data</th>
+													<th class="center">Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="center">
+														First Name
+													</td>
+													<td class="center">
+														<?php echo $row['StudentFirstName'] ?>
+													</td>
+												</tr>
+												<tr>
+													<td class="center">
+														Middle Name
+													</td>
+													<td class="center">
+														<?php echo $row['StudentMiddleName'] ?>
+													</td>
+												</tr>
+												<tr>
+													<td class="center">
+														Last Name
+													</td>
+													<td class="center">
+														<?php echo $row['StudentLastName'] ?>
+													</td>
+												</tr>
+												<tr>
+													<td class="center">
+														Email
+													</td>
+													<td class="center">
+														<?php echo $row['StudentEmail'] ?>
+													</td>
+												</tr>
+												
+												<tr>
+													<td class="center">
+														Telephone
+													</td>
+													<td class="center">
+														<?php echo $row['StudentTelephone'] ?>
+													</td>
+												</tr>
+												<tr>
+													<td class="center">
+														Semester
+													</td>
+													<td class="center">
+														<?php echo $row['Semester'] ?>
+													</td>
+												</tr>
+												<tr>
+													<td class="center">
+														Country
+													</td>
+													<td class="center">
+														<?php echo $row['CountryName'] ?>
+													</td>
+												</tr><tr>
+													<td class="center">
+														University
+													</td>
+													<td class="center">
+														<?php echo $row['EducationUniversityName'] ?>
+													</td>
+												</tr><tr>
+													<td class="center">
+														Degree Attended Last
+													</td>
+													<td class="center">
+														<?php echo $row['EducationDegreeTitle'] ?>
+													</td>
+												</tr><tr>
+													<td class="center">
+														GPA
+													</td>
+													<td class="center">
+														<?php echo $row['EducationDegreeCGPA'] ?>
+													</td>
+												</tr>
+												
+											</tbody>
+										</table>
+									</div><!-- /.span -->
 						
 						
 						
+				
 						
 						
 						
 						
-					<!--	<center><h1><br/><br/>Welcome <br/><br/> To <br/><br/> MAC-MIS System</h1></center>  -->
+						
+						
+						
+					
 							
 							
 						</div><!-- /.row -->
@@ -893,29 +593,4 @@
 		</script>
 	</body>
 </html>
-
-
-<?php
-
-if(!empty($_POST))
-{
-	$f_name=$_POST['fname'];
-	$l_name=$_POST['lname'];
-	$u_name=$_POST['uname'];
-	$p_wd=$_POST['pwd'];
-	$user_type=$_POST['userType'];
-
-	$con=mysqli_connect("localhost","root","");
-	//mysql_connect("localhost","root","");
-	mysqli_select_db($con,"MACMIS");
-	//mysql_select_db("MACMIS");
-	//$result=mysqli_query($con,"select * from tblRegisterUser") or die("Failed to Query Database".mysqli_error());
-	$result=mysqli_query($con,"INSERT INTO tblRegisterUser (UserFirstName,UserLastName,UserEmail,UserPassword,UserType) VALUES ('$f_name','$l_name','$u_name','$p_wd','$user_type')") or die("Failed to Query Database".mysql_error());
-	//echo "Inserted Successfully...!!!";
-	$success='<div class="form-group">
-				<center><h3>Inserted Successfully...!!!</h3></center>
-				
-			</div>';
-}
-?>
 

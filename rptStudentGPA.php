@@ -123,6 +123,106 @@
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
 
+				<?php
+				if($_SESSION['usertype']=="Faculty")
+				{
+			?>
+			<ul class="nav nav-list">
+					<li class="active">
+						<a href="Dashboard.php">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Dashboard </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text"> Reports </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="viewStudent.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Students
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="rptStudentGPA.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student Average GPA
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="rptStudentCountry.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student from Specific Country
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="rptStudentJob.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student With / Without Job
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="rptStudentYear.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student from Specific Year
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="rptAllEmployer.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Employers
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="rptEmployerCity.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Employer from Specific City
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="rptOpenJob.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Open Positions
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>					
+					
+				</ul>
+			<?php
+				}
+				elseif($_SESSION['usertype']=="Staff")
+				{
+			?>
 				<ul class="nav nav-list">
 					<li class="active">
 						<a href="Dashboard.php">
@@ -465,6 +565,9 @@
 					</li>					
 					
 				</ul><!-- /.nav-list -->
+			<?php
+				}
+			?>
 
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -480,10 +583,8 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Home</a>
 							</li>
-							<li class="active">Students
-							
-							</li>
-							<li class="active"> Add Student Info</li>
+							<li class="active">Reports</li>
+							<li class="active">Student Avg GPA</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -566,7 +667,7 @@
 
 						<div class="page-header">
 							<h1>
-								Add Student Info
+								Student Avg GPA
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									
@@ -576,200 +677,52 @@
 
 						<div class="row">
 						
-							<br/>						
-							<form class="form-horizontal" action="AddStudentInfo.php" role="form" method="POST">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="fname" placeholder="First Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Middle Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="mname" placeholder="Middle Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="lname" placeholder="Last Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Country </label>
-
-										<div class="col-sm-4 widget-body">
-										
-															<select class="form-control" name="country" id="form-field-select-1">
-														
-															
-															<?php
-																$con=mysqli_connect("localhost","root","");
-																mysqli_select_db($con,"MACMIS");
-																$sql = mysqli_query($con, "SELECT * FROM tblCountry");
-																
-																while ($row = $sql->fetch_assoc()){
-																	echo "<option value='" . $row['CountryId'] . "'>" . $row['CountryName'] . "</option>";
-																	 
-																}
-																
-															?>
-															
-															</select>
-														</div>
-
-									</div>
-									
-									<div class="space-4"></div>
+						<form action="rptStudentGPA.php" class="form-horizontal" role="form" method="POST">
 									
 									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="email" placeholder="Email" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Telephone </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="tel" placeholder="Telephone" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Gender </label>
-
-										<div class="radio">
-													<label>
-														<input id="rb1" name="gender" type="radio" class="ace" value="Male" />
-														<span class="lbl"> Male</span>
-														
-													</label>
-													<label>
-														<input name="gender" type="radio" class="ace" value="Female" />
-														<span class="lbl"> Female</span>
-													</label>
-										</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status </label>
-
-										<div class="radio">
-													<label>
-														<input name="status" type="radio" class="ace" value="International" checked />
-														<span class="lbl"> International</span>
-													</label>
-													<label>
-														<input name="status" type="radio" class="ace" value="Permanent Resident" />
-														<span class="lbl"> Permanent Resident</span>
-													</label>
-										</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Current_Past </label>
-
-										<div class="radio">
-													<label>
-														<input name="curpast" type="radio" class="ace" value="Current" checked />
-														<span class="lbl"> Current</span>
-													</label>
-													<label>
-														<input name="curpast" type="radio" class="ace" value="Past" />
-														<span class="lbl"> Past</span>
-													</label>
-										</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Semester </label>
-
-										<div class="col-sm-4 widget-body">
-										
-															<select class="form-control" name="sem" id="form-field-select-1">
-														
-															
-															<?php
-																$con=mysqli_connect("localhost","root","");
-																mysqli_select_db($con,"MACMIS");
-																$sql = mysqli_query($con, "SELECT * FROM tblSemester");
-																
-																while ($row = $sql->fetch_assoc()){
-																	echo "<option value='" . $row['SemesterId'] . "'>" . $row['Semester'] . "</option>";
-																	 
-																}
-																
-															?>
-															
-															</select>
-														</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-									
-											<?php
-										if(isset($_POST['sub']))
-										{
-									?>
-											<div class="form-group">								
-											<div class="col-sm-9">
-												<center><h4>Inserted Successfully...!!!</h4></center>
-											</div>
-											</div>
-									<?php	
-										}
-									?>
 									
 									
-
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-										
-										<input type="submit" value="submit" name="sub" class="btn btn-info">
-										
-											
-
-											&nbsp; &nbsp; &nbsp;
-											<button class="btn" type="reset">
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<button class="btn btn-success" name="gpa">
 												<i class="ace-icon fa fa-undo bigger-110"></i>
-												Reset
+												Average GPA
 											</button>
+
+											
+											
 										</div>
 									</div>
-									</form>
-						
-							
+				</form>	
+				
+				
+
+
+
+
+<?php
+	
+		if(isset($_POST['gpa']))
+		{
+		
+			$con=mysqli_connect("localhost","root","");
+			mysqli_select_db($con,"MACMIS");
+											
+			$result=mysqli_query($con,"SELECT ROUND(AVG(EducationDegreeCGPA),2) AS AverageGPA FROM tblEducation") or die("Failed to Query Database".mysqli_error());
+			$row = mysqli_fetch_assoc( $result )
+			//$avg=string($result);
+?>
+
+<br/><br/><br/>
+	<h1><center>Current Average GPA is: <?php echo $row['AverageGPA'];
+	?></center></h1>
+	
+	<?php	}	?>
+			
+			
+	
 							
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
@@ -1061,50 +1014,5 @@
 	</body>
 </html>
 
-
-
-
-
-
-
-
-
-<?php
-
-if(!empty($_POST))
-{
-	$f_name=$_POST['fname'];
-	$m_name=$_POST['mname'];
-	$l_name=$_POST['lname'];
-	$c_ountry=$_POST['country'];
-	$e_mail=$_POST['email'];
-	$t_el=$_POST['tel'];
-	$g_ender=$_POST['gender'];
-	$s_tatus=$_POST['status'];
-	$c_urpast=$_POST['curpast'];
-	$s_em=$_POST['sem'];
-	
-	
-
-	$con=mysqli_connect("localhost","root","");
-	//mysql_connect("localhost","root","");
-	mysqli_select_db($con,"MACMIS");
-	//mysql_select_db("MACMIS");
-	//$result=mysqli_query($con,"select * from tblRegisterUser") or die("Failed to Query Database".mysqli_error());
-	$result2=mysqli_query($con,"INSERT INTO tblRegisterUser (UserFirstName,UserLastName,UserEmail,UserPassword,UserType) VALUES ('$f_name','$l_name','$e_mail','1234','Student')") or die("Failed to Query Database".mysql_error());
-	
-	$result3=mysqli_query($con,"SELECT UserId from tblRegisterUser where UserEmail='$e_mail'") or die("Failed to Query Database".mysql_error());
-	$row=mysqli_fetch_array($result3); 
-	$u_id=$row['UserId'];
-	echo $u_id;
-	$result=mysqli_query($con,"INSERT INTO tblStudent (UserId,StudentFirstName,StudentMiddleName,StudentLastName,CountryId,StudentEmail,StudentTelephone,StudentGender,StudentStatus,StudentCurrent_Past,SemesterId) VALUES ('$u_id','$f_name','$m_name','$l_name','$c_ountry','$e_mail','$t_el','$g_ender','$s_tatus','$c_urpast','$s_em')") or die("Failed to Query Database".mysql_error());
-	
-	
-	//echo "Inserted Successfully...!!!";
-	$success='<div class="form-group">
-				<center><h3>Inserted Successfully...!!!</h3></center>
 				
-			</div>';
-}
-?>
-
+				

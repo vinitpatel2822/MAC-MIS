@@ -14,8 +14,9 @@ $count=mysql_num_rows($result);
 if($count>=1){
 	$_SESSION['is_logged_in']=true;
 	$_SESSION['username']=$username;
-	
+	$_SESSION['usertype']=$row['UserType'];
 	header("Location:Dashboard.php");
+	
 }
 else{
 	header("Location:login.php");

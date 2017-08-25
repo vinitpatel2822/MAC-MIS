@@ -72,7 +72,7 @@
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/avatar2.png" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									<!--Vinit Patel -->
@@ -83,8 +83,21 @@
 							</a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								
-								
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="profile.html">
+										<i class="ace-icon fa fa-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
 
 								<li>
 									<a href="login.php">
@@ -404,7 +417,7 @@
 							</li>
 							
 							<li class="">
-								<a href="rptStudentGPA.php">
+								<a href="inbox.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Student Average GPA
 								</a>
@@ -421,14 +434,21 @@
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="rptStudentJob.php">
+								<a href="inbox.html">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Student With / Without Job
+									Student with Job
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-							
+							<li class="">
+								<a href="inbox.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Student without Job
+								</a>
+
+								<b class="arrow"></b>
+							</li>
 							<li class="">
 								<a href="rptStudentYear.php">
 									<i class="menu-icon fa fa-caret-right"></i>
@@ -480,10 +500,7 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Home</a>
 							</li>
-							<li class="active">Students
-							
-							</li>
-							<li class="active"> Add Student Info</li>
+							<li class="active">Internship</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -566,7 +583,7 @@
 
 						<div class="page-header">
 							<h1>
-								Add Student Info
+								Internship
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									
@@ -575,168 +592,119 @@
 						</div><!-- /.page-header -->
 
 						<div class="row">
-						
+							<center><h1>Internship Data</h1></center>
 							<br/>						
-							<form class="form-horizontal" action="AddStudentInfo.php" role="form" method="POST">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> First Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="fname" placeholder="First Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-
-									<div class="space-4"></div>
+							<form class="form-horizontal" action="Internship.php" role="form" method="POST">
 									
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Middle Name </label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Student ID </label>
 
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="mname" placeholder="Middle Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Last Name </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="lname" placeholder="Last Name" class="col-xs-10 col-sm-5" />
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Country </label>
-
-										<div class="col-sm-4 widget-body">
-										
-															<select class="form-control" name="country" id="form-field-select-1">
+										<div class="col-sm-3 widget-body">
+											
+															<select class="form-control" name="stuId" id="form-field-select-1">
 														
-															
+															<option value="">--Select Student Id--</option>
 															<?php
 																$con=mysqli_connect("localhost","root","");
 																mysqli_select_db($con,"MACMIS");
-																$sql = mysqli_query($con, "SELECT * FROM tblCountry");
+																$sql = mysqli_query($con, "SELECT StudentId FROM tblStudent");
 																
 																while ($row = $sql->fetch_assoc()){
-																	echo "<option value='" . $row['CountryId'] . "'>" . $row['CountryName'] . "</option>";
+																	echo "<option value='" . $row['StudentId'] . "'>" . $row['StudentId'] . "</option>";
 																	 
 																}
 																
 															?>
 															
 															</select>
-														</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-									
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email </label>
-
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="email" placeholder="Email" class="col-xs-10 col-sm-5" />
 										</div>
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Telephone </label>
 
-										<div class="col-sm-9">
-											<input type="text" id="form-field-1" name="tel" placeholder="Telephone" class="col-xs-10 col-sm-5" />
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Internship Type </label>
+
+										<div class="col-sm-3 widget-body">
+											
+															<select class="form-control" name="intType" id="form-field-select-1">
+																<option value="">--Select Type--</option>
+																<option value="Industry">Industry</option>
+																<option value="MAC Project">MAC Project</option>
+																<option value="Other">Other</option>
+															</select>
 										</div>
+
 									</div>
 									
 									<div class="space-4"></div>
-									
+
+	
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Gender </label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Pay  </label>
 
 										<div class="radio">
 													<label>
-														<input id="rb1" name="gender" type="radio" class="ace" value="Male" />
-														<span class="lbl"> Male</span>
-														
+														<input name="rb1" type="radio" class="ace" value="Paid" />
+														<span class="lbl"> Paid</span>
 													</label>
 													<label>
-														<input name="gender" type="radio" class="ace" value="Female" />
-														<span class="lbl"> Female</span>
+														<input name="rb1" type="radio" class="ace" value="Unpaid" />
+														<span class="lbl"> Unpaid</span>
 													</label>
 										</div>
-
 									</div>
-									
+
+
 									<div class="space-4"></div>
 									
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status </label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Company Name </label>
 
-										<div class="radio">
-													<label>
-														<input name="status" type="radio" class="ace" value="International" checked />
-														<span class="lbl"> International</span>
-													</label>
-													<label>
-														<input name="status" type="radio" class="ace" value="Permanent Resident" />
-														<span class="lbl"> Permanent Resident</span>
-													</label>
-										</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-									
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Current_Past </label>
-
-										<div class="radio">
-													<label>
-														<input name="curpast" type="radio" class="ace" value="Current" checked />
-														<span class="lbl"> Current</span>
-													</label>
-													<label>
-														<input name="curpast" type="radio" class="ace" value="Past" />
-														<span class="lbl"> Past</span>
-													</label>
-										</div>
-
-									</div>
-									
-									<div class="space-4"></div>
-
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Semester </label>
-
-										<div class="col-sm-4 widget-body">
-										
-															<select class="form-control" name="sem" id="form-field-select-1">
-														
-															
-															<?php
+										<div class="col-sm-3 widget-body">
+											
+															<select class="form-control" name="cId" id="form-field-select-1">
+																<?php
 																$con=mysqli_connect("localhost","root","");
 																mysqli_select_db($con,"MACMIS");
-																$sql = mysqli_query($con, "SELECT * FROM tblSemester");
+																$sql = mysqli_query($con, "SELECT * FROM tblCompany");
 																
 																while ($row = $sql->fetch_assoc()){
-																	echo "<option value='" . $row['SemesterId'] . "'>" . $row['Semester'] . "</option>";
+																	echo "<option value='" . $row['CompanyId'] . "'>" . $row['CompanyName'] . "</option>";
 																	 
 																}
 																
 															?>
-															
 															</select>
-														</div>
+										</div>
 
 									</div>
 									
 									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Job Group </label>
+
+										<div class="col-sm-3 widget-body">
+											
+															<select class="form-control" name="jId" id="form-field-select-1">
+																<?php
+																$con=mysqli_connect("localhost","root","");
+																mysqli_select_db($con,"MACMIS");
+																$sql = mysqli_query($con, "SELECT * FROM tblJobGroup");
+																
+																while ($row = $sql->fetch_assoc()){
+																	echo "<option value='" . $row['JobGroupId'] . "'>" . $row['JobGroupName'] . "</option>";
+																	 
+																}
+																
+															?>
+															</select>
+										</div>
+
+									</div>
+									
+									<div class="space-4"></div>
+									
 									
 											<?php
 										if(isset($_POST['sub']))
@@ -755,10 +723,7 @@
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-										
-										<input type="submit" value="submit" name="sub" class="btn btn-info">
-										
-											
+											<input type="submit" value="submit" name="sub" class="btn btn-info">
 
 											&nbsp; &nbsp; &nbsp;
 											<button class="btn" type="reset">
@@ -1073,16 +1038,11 @@
 
 if(!empty($_POST))
 {
-	$f_name=$_POST['fname'];
-	$m_name=$_POST['mname'];
-	$l_name=$_POST['lname'];
-	$c_ountry=$_POST['country'];
-	$e_mail=$_POST['email'];
-	$t_el=$_POST['tel'];
-	$g_ender=$_POST['gender'];
-	$s_tatus=$_POST['status'];
-	$c_urpast=$_POST['curpast'];
-	$s_em=$_POST['sem'];
+	$stu_id=$_POST['stuId'];
+	$I_type=$_POST['intType'];
+	$rb_1=$_POST['rb1'];
+	$c_id=$_POST['cId'];
+	$j_id=$_POST['jId'];
 	
 	
 
@@ -1091,15 +1051,7 @@ if(!empty($_POST))
 	mysqli_select_db($con,"MACMIS");
 	//mysql_select_db("MACMIS");
 	//$result=mysqli_query($con,"select * from tblRegisterUser") or die("Failed to Query Database".mysqli_error());
-	$result2=mysqli_query($con,"INSERT INTO tblRegisterUser (UserFirstName,UserLastName,UserEmail,UserPassword,UserType) VALUES ('$f_name','$l_name','$e_mail','1234','Student')") or die("Failed to Query Database".mysql_error());
-	
-	$result3=mysqli_query($con,"SELECT UserId from tblRegisterUser where UserEmail='$e_mail'") or die("Failed to Query Database".mysql_error());
-	$row=mysqli_fetch_array($result3); 
-	$u_id=$row['UserId'];
-	echo $u_id;
-	$result=mysqli_query($con,"INSERT INTO tblStudent (UserId,StudentFirstName,StudentMiddleName,StudentLastName,CountryId,StudentEmail,StudentTelephone,StudentGender,StudentStatus,StudentCurrent_Past,SemesterId) VALUES ('$u_id','$f_name','$m_name','$l_name','$c_ountry','$e_mail','$t_el','$g_ender','$s_tatus','$c_urpast','$s_em')") or die("Failed to Query Database".mysql_error());
-	
-	
+	$result=mysqli_query($con,"INSERT INTO tblInternship (StudentId,InternshipType,InternshipPay,CompanyId,JobGroupId) VALUES ('$stu_id','$I_type','$rb_1','$c_id','$j_id')") or die("Failed to Query Database".mysql_error());
 	//echo "Inserted Successfully...!!!";
 	$success='<div class="form-group">
 				<center><h3>Inserted Successfully...!!!</h3></center>

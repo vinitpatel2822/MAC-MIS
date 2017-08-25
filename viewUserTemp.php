@@ -40,7 +40,20 @@
 
 												<tbody>
 												
-													<?php include(\'tmp.php\');?>
+													<?php
+													mysql_connect("localhost","root","");
+													mysql_select_db("MACMIS");
+
+													$result=mysql_query("select * from tblRegisterUser") or die("Failed to Query Database".mysql_error());
+													
+													if( mysql_num_rows( $result )==0 ){
+														echo '<tr><td colspan="4">No Rows Returned</td></tr>';
+													}else{
+													while( $row = mysql_fetch_assoc( $result ) ){
+														echo "<tr><td>{$row['UserId']}</td><td>{$row['UserFirstName']}</td><td>{$row['UserLastName']}</td><td>{$row['UserEmail']}</td><td>{$row['UserPassword']}</td><td>{$row['UserType']}</td></tr>\n";
+													}
+													}
+													?>
 															
 												</tbody>
 											</table>
@@ -50,7 +63,7 @@
 
 ?>
 
-<?php include('index2.php');?>
+<?php include('index.php');?>
 
 
 

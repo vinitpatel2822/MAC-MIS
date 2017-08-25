@@ -35,14 +35,14 @@
 		<![endif]-->
 	</head>
 
-	<body class="login-layout">
+	<body class="login-layout" background="assets/images/avatars/bg2.jpg">
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="login-container">
 							<div class="center">
-								<h1> <br/><br/>
+								<h1> <br/><br/><br/>
 									<i class="ace-icon fa fa-leaf green"></i>
 									<span class="red">MAC-MIS</span>
 									<span class="white" id="id-text2">System</span>
@@ -101,21 +101,7 @@
 											
 										</div><!-- /.widget-main -->
 
-										<div class="toolbar clearfix">
-											<div>
-												<a href="#" data-target="#forgot-box" class="forgot-password-link">
-													<i class="ace-icon fa fa-arrow-left"></i>
-													I forgot my password
-												</a>
-											</div>
-
-											<div>
-												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
-													<i class="ace-icon fa fa-arrow-right"></i>
-												</a>
-											</div>
-										</div>
+										
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->
 
